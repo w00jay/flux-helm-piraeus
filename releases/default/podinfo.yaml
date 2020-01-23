@@ -1,0 +1,23 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: piraeus-release
+  namespace: default
+  annotations:
+    fluxcd.io/automated: "true"
+    #filter.fluxcd.io/chart-image: glob:experimental*
+    filter.fluxcd.io/chart-image: experimental3
+spec:
+  releaseName: piraeus-release
+  chart:
+    git: git@github.com:w00jay/flux-helm-piraeus
+    path: charts/piraeus
+    ref: master
+  values:
+    image:
+      repository: localhost:5000/wooj/piraeus
+      tag: experimental1
+    replicaCount: 1
+    hpa:
+      enabled: false
