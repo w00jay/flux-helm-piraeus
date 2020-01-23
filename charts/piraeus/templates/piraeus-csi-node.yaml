@@ -47,7 +47,7 @@ spec:
             - name: registration-dir
               mountPath: /registration/
         - name: linstor-csi-plugin
-          image: quay.io/pireausdatastore/piraeus-csi:v0.7.3
+          image: quay.io/piraeusdatastore/piraeus-csi:v0.7.3
           # imagePullSecrets:
           #   - name: {{ .Values.repoCreds }}
           args:
