@@ -71,7 +71,7 @@ spec:
             - name: socket-dir
               mountPath: /var/lib/csi/sockets/pluginproxy/
         - name: linstor-csi-plugin
-          image: quay.io/linbit/linstor-csi:v0.7.2
+          image: quay.io/piraeusdatastore/piraeus-csi:v0.7.3
           # image: drbd.io/linstor-csi:v0.7.2
           # imagePullSecrets:
           #   - name: {{ .Values.repoCreds }}
