@@ -2,14 +2,14 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: piraeus
+  name: piraeus-thang
   namespace: default
   annotations:
     fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: glob:ex*
     #filter.fluxcd.io/chart-image: experimental3
 spec:
-  releaseName: piraeus
+  releaseName: piraeus-release
   chart:
     git: git@github.com:w00jay/flux-helm-piraeus
     path: charts/piraeus
