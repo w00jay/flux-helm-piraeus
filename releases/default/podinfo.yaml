@@ -12,8 +12,7 @@ spec:
   releaseName: piraeus-helm-flux
   chart:
     git: git@github.com:w00jay/flux-helm-piraeus
-    #path: charts/piraeus
-    path: charts/new-operator-repo/helm-chart/piraeus
+    path: charts/piraeus/helm-chart/piraeus
     ref: master
   values:
     image:
